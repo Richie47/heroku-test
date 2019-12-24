@@ -4,7 +4,7 @@ var app = express();
 var path = require('path');
 var reload = require('reload'); //npm install -g --save-dev reload
 
-
+app.use(express.static(path.join(__dirname, "static")));
 var server = http.createServer(app);
 //reload code to refresh browser upon code completion
 reload(app).then(function (reloadReturned) {
